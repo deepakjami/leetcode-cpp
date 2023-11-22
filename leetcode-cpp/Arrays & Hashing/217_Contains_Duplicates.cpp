@@ -1,3 +1,6 @@
+// Solution 1 : 
+// Time Complexity: O(n log n)
+// Space Complexity: O(log n) 
 class Solution {
 public:
     bool containsDuplicate(vector<int>&nums)
@@ -15,5 +18,22 @@ public:
     }
 };
 
-// Time Complexity: O(n log n)
-// Space Complexity: O(log n)
+//Solution 2 :
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums)
+    {
+        unordered_set<int> numSet;
+        for (int num : nums)
+        {
+            if (numSet.find(num) != numSet.end())
+            {
+                return true;
+            }
+            numSet.insert(num);
+        }
+        return false;
+    }
+};
