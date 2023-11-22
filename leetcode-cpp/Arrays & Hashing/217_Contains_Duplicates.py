@@ -7,6 +7,8 @@ class Solution:
             hashset.add(n)
         return False
 
+# no need of the below part in leetcode
+
 my_list = list(map(int,input().split()))
 solution = Solution()
 result = solution.containsDuplicates(my_list)
